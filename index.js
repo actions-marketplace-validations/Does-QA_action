@@ -46,7 +46,7 @@ async function run() {
                     params,
                     headers,
                     validateStatus: (status) => {
-                        if(status > 500) {
+                        if(status >= 500) {
                             // Retry the call if it fails
                             return false;
                         }
